@@ -207,7 +207,7 @@
  * PrusaSlicer can add this on certain height. Marlin actually does not support this.
  * Acts here like manual pause
  */
-//#define NOZZLE_PAUSE_M601
+#define NOZZLE_PAUSE_M601
 
 /**
  * Auto Save Load Leveling Data
