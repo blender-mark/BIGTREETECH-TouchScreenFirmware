@@ -25,7 +25,7 @@
  *
  * Default value is: 1 for LED_OFF
 */
-#define STARTUP_KNOB_LED_COLOR 0         // LED_OFF
+#define STARTUP_KNOB_LED_COLOR 6         // blue
 #define KEEP_KNOB_LED_COLOR_MARLIN_MODE  // Keeps the LED state in Marlin Mode
 
 /**
@@ -46,7 +46,7 @@
  */
 #define DEFAULT_LCD_BRIGHTNESS      10  // 10: LCD_100_PERCENT - Brightness value from list
 #define DEFAULT_LCD_IDLE_BRIGHTNESS 2   // 2: LCD_10_PERCENT - Brightness value from list
-#define DEFAULT_LCD_IDLE_TIMER      0   // 0: LCD_DIM_OFF
+#define DEFAULT_LCD_IDLE_TIMER      2   // 0: LCD_DIM_OFF
 #define LCD_DIM_CUSTOM_SECONDS      600 // Custom value in seconds. Will be used if LCD_DIM_CUSTOM_SECONDS is set as idle timer.
 
 //===========================================================================
@@ -63,12 +63,12 @@
  *         12: DARKBLUE,  13: DARKGREEN,  14: GRAY,   15: DARKGRAY
  */
 #define ST7920_BKCOLOR 1
-#define ST7920_FNCOLOR 0
+#define ST7920_FNCOLOR 3
 
 /**
  *  Text displayed at the top of the TFT in Marlin Mode.
  */
-#define ST7920_BANNER_TEXT "LCD12864 Simulator"
+#define ST7920_BANNER_TEXT "LCD12864"
 
 /**
  *  show banner text at the top of the TFT in Marlin Mode.
@@ -80,7 +80,7 @@
  *  Options:  0: Disabled. RECOMMENDED FOR TFT24
  *            1: Enabled Marlin Fullscreen mode.
  */
-#define DEFAULT_ST7920_FULLSCREEN_MODE 0 // 0: Disabled. RECOMMENDED FOR TFT24
+#define DEFAULT_ST7920_FULLSCREEN_MODE 1 // 0: Disabled. RECOMMENDED FOR TFT24
 
 /**
  * Keep Serial always On (ONLY SUPPORTED ON TFT24 V1.1, TFT35 V3.0, AND TFT28 V3.0)
@@ -155,7 +155,7 @@
 
 //                         PLA      PETG      ABS
 #define PREHEAT_LABELS   {"PLA", "PETG", "ABS", "TPU"}
-#define PREHEAT_HOTEND   {200,   250,    230,   230}
+#define PREHEAT_HOTEND   {205,   235,    230,   230}
 #define PREHEAT_BED      {60,    70,     100,   50}
 
 #define HEAT_MAX_TEMP    {150,    275,       275,       275,       275,       275,       275}    //max temperature can be set
@@ -192,7 +192,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS 235
 #define Y_MAX_POS 235
-#define Z_MAX_POS 250
+#define Z_MAX_POS 300
 
 // Specify a pause position as { X, Y, Z_raise }
 #define NOZZLE_PAUSE_RETRACT_LENGTH 15   // (mm)
@@ -299,32 +299,32 @@
  *
  * CUSTOM_X_LABEL is the name of the custom button, CUSTOM_X_GCODE is the G-code to be sent by the custom button, this should always end with a New-Line character '\n'
  */
-#define CUSTOM_0_LABEL "Disable Steppers"
-#define CUSTOM_0_GCODE "M84\n"
-#define CUSTOM_1_LABEL "Init SD Card"
-#define CUSTOM_1_GCODE "M21\n"
-#define CUSTOM_2_LABEL "Release SD Card"
-#define CUSTOM_2_GCODE "M22\n"
-#define CUSTOM_3_LABEL "Enable Leveling State"
-#define CUSTOM_3_GCODE "M420 S1\n"
-#define CUSTOM_4_LABEL "Save to EEPROM"
-#define CUSTOM_4_GCODE "M500\n"
-#define CUSTOM_5_LABEL "Restore from EEPROM"
-#define CUSTOM_5_GCODE "M501\n"
-#define CUSTOM_6_LABEL "EEPROM Defaults"
-#define CUSTOM_6_GCODE "M502\n"
-//#define CUSTOM_7_LABEL "Custom7"
-//#define CUSTOM_7_GCODE "M105\n"
-//#define CUSTOM_8_LABEL "Custom8"
-//#define CUSTOM_8_GCODE "M105\n"
-//#define CUSTOM_9_LABEL "Custom9"
-//#define CUSTOM_9_GCODE "M105\n"
-//#define CUSTOM_10_LABEL "Custom10"
-//#define CUSTOM_10_GCODE "M105\n"
-//#define CUSTOM_11_LABEL "Custom11"
-//#define CUSTOM_11_GCODE "M105\n"
-//#define CUSTOM_12_LABEL "Custom12"
-//#define CUSTOM_12_GCODE "M105\n"
+#define CUSTOM_0_LABEL "Home & Z height"
+#define CUSTOM_0_GCODE "G28\nG1 Z85 F200\n"
+#define CUSTOM_1_LABEL "Go front right"
+#define CUSTOM_1_GCODE "G1 X10 Y170 F3000\n"
+#define CUSTOM_2_LABEL "Go front left"
+#define CUSTOM_2_GCODE "G1 X220 Y170 F3000\n"
+#define CUSTOM_3_LABEL "Go back left"
+#define CUSTOM_3_GCODE "G1 X220 Y1 F3000\n"
+#define CUSTOM_4_LABEL "Go back right"
+#define CUSTOM_4_GCODE "G1 X5 Y1 F3000\n"
+#define CUSTOM_5_LABEL "Disable Steppers"
+#define CUSTOM_5_GCODE "M84\n"
+#define CUSTOM_6_LABEL "Init SD Card"
+#define CUSTOM_6_GCODE "M21\n"
+#define CUSTOM_7_LABEL "Release SD Card"
+#define CUSTOM_7_GCODE "M22\n"
+#define CUSTOM_8_LABEL "Enable Leveling State"
+#define CUSTOM_8_GCODE "M420 S1\n"
+#define CUSTOM_9_LABEL "Save to EEPROM"
+#define CUSTOM_9_GCODE "M500\n"
+#define CUSTOM_10_LABEL "Restore from EEPROM"
+#define CUSTOM_10_GCODE "M501\n"
+#define CUSTOM_11_LABEL "EEPROM Defaults"
+#define CUSTOM_11_GCODE "M502\n"
+#define CUSTOM_12_LABEL "Park nozzle"
+#define CUSTOM_12_GCODE "G27\n"
 //#define CUSTOM_13_LABEL "Custom13"
 //#define CUSTOM_13_GCODE "M105\n"
 //#define CUSTOM_14_LABEL "Custom14"
