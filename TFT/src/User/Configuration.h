@@ -23,9 +23,9 @@
  *           4: LED_ORANGE,  5: LED_YELLOW,  6: LED_GREEN,
  *           7: LED_BLUE,    8: LED_INDIGO,  9: LED_VIOLET
  *
- * Default value is: 1 for LED_OFF
+ * Default value is: 6 for LED_OFF
 */
-#define STARTUP_KNOB_LED_COLOR 1         // LED_OFF
+#define STARTUP_KNOB_LED_COLOR 7         // LED_OFF
 #define KEEP_KNOB_LED_COLOR_MARLIN_MODE  // Keeps the LED state in Marlin Mode
 
 /**
@@ -67,7 +67,7 @@
 /**
  *  Text displayed at the top of the TFT in Marlin Mode.
  */
-//#define ST7920_BANNER_TEXT "LCD12864 Simulator"
+//#define ST7920_BANNER_TEXT "LCD12864"
 
 /**
  * Run Marlin Mode in Fullscreen
@@ -86,7 +86,7 @@
  *
  * *** ONLY SUPPORTED ON TFT24 V1.1, TFT35 V3.0, AND TFT28 V3.0 ***
  */
-//#define CLEAN_MODE_SWITCHING_SUPPORT  // Enable CLEAN MODE SWITCHING SUPPORT
+#define CLEAN_MODE_SWITCHING_SUPPORT  // Enable CLEAN MODE SWITCHING SUPPORT
 
 //===========================================================================
 //========================== Touch Mode Settings ============================
@@ -144,7 +144,7 @@
 
 //                       PLA      PETG       ABS
 #define PREHEAT_BED      {60,      70,       100}
-#define PREHEAT_HOTEND   {200,     250,      230}
+#define PREHEAT_HOTEND   {210,     235,      230}
 
 #define HEAT_MAX_TEMP    {150,    275,       275,       275,       275,       275,       275}    //max temperature can be set
 #define HEAT_SIGN_ID     {"B:",   "T0:",     "T1:",     "T2:",     "T3:",     "T4:",     "T5:"}
